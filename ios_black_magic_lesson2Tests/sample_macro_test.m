@@ -16,5 +16,10 @@ describe(@"sample_macro_test", ^{
         #import "SampleFile.txt"
         #include "SampleFile2.txt"
     });
+    
+    it(@"can define some macro in project configurations", ^{
+        NSLog(@"MY_MACRO is %d", MY_MACRO);
+    });
+    
 });
 SpecEnd
