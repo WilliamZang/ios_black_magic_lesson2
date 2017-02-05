@@ -13,7 +13,7 @@
 		22758E081E471AED006DB197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22758E061E471AED006DB197 /* Main.storyboard */; };
 		22758E0A1E471AED006DB197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22758E091E471AED006DB197 /* Assets.xcassets */; };
 		22758E0D1E471AED006DB197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22758E0B1E471AED006DB197 /* LaunchScreen.storyboard */; };
-		22758E181E471AED006DB197 /* ios_black_magic_lesson2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22758E171E471AED006DB197 /* ios_black_magic_lesson2Tests.m */; };
+		22758E231E471E3D006DB197 /* sample_macro_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 22758E221E471E3D006DB197 /* sample_macro_test.m */; };
 		2B16629A7B84C8A2CC81D99E /* libPods-ios_black_magic_lesson2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA5EB81D0843AD924ABB5C0 /* libPods-ios_black_magic_lesson2.a */; };
 		89C9BD5761FDC9AA3169EBA7 /* libPods-ios_black_magic_lesson2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E50E895B29D5A63D817DD /* libPods-ios_black_magic_lesson2Tests.a */; };
 /* End PBXBuildFile section */
@@ -41,8 +41,10 @@
 		22758E0C1E471AED006DB197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22758E0E1E471AED006DB197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22758E131E471AED006DB197 /* ios_black_magic_lesson2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_black_magic_lesson2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22758E171E471AED006DB197 /* ios_black_magic_lesson2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_black_magic_lesson2Tests.m; sourceTree = "<group>"; };
 		22758E191E471AED006DB197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22758E221E471E3D006DB197 /* sample_macro_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sample_macro_test.m; sourceTree = "<group>"; };
+		22758E241E472300006DB197 /* SampleFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleFile.txt; sourceTree = "<group>"; };
+		22758E271E472685006DB197 /* SampleFile2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleFile2.txt; sourceTree = "<group>"; };
 		5C2E50E895B29D5A63D817DD /* libPods-ios_black_magic_lesson2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios_black_magic_lesson2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7EEF5BDE67151AF98AD6E0 /* Pods-ios_black_magic_lesson2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_black_magic_lesson2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_black_magic_lesson2Tests/Pods-ios_black_magic_lesson2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FCA1443937567525FC9AADE /* Pods-ios_black_magic_lesson2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_black_magic_lesson2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_black_magic_lesson2Tests/Pods-ios_black_magic_lesson2Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,8 +119,10 @@
 		22758E161E471AED006DB197 /* ios_black_magic_lesson2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				22758E171E471AED006DB197 /* ios_black_magic_lesson2Tests.m */,
 				22758E191E471AED006DB197 /* Info.plist */,
+				22758E241E472300006DB197 /* SampleFile.txt */,
+				22758E271E472685006DB197 /* SampleFile2.txt */,
+				22758E221E471E3D006DB197 /* sample_macro_test.m */,
 			);
 			path = ios_black_magic_lesson2Tests;
 			sourceTree = "<group>";
@@ -354,7 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22758E181E471AED006DB197 /* ios_black_magic_lesson2Tests.m in Sources */,
+				22758E231E471E3D006DB197 /* sample_macro_test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +549,7 @@
 				22758E1E1E471AED006DB197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22758E1F1E471AED006DB197 /* Build configuration list for PBXNativeTarget "ios_black_magic_lesson2Tests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +558,7 @@
 				22758E211E471AED006DB197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
