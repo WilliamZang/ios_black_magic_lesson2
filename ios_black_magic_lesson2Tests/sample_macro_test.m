@@ -57,5 +57,13 @@ describe(@"sample_macro_test", ^{
         NSLog(@"%s:%d", __FILE__, __LINE__);
     });
     
+    it(@"can use ... to receive multi parameters", ^{
+#define MY_LOG(str, ...)   NSLog(@"【"__FILE__":%d】"str, __LINE__, __VA_ARGS__)
+        MY_LOG("%d %d %d", 1, 2, 3);
+//        MY_LOG("no parameters");
+        
+#define MY_LOG2(str, ...)   NSLog(@"【"__FILE__":%d】"str, __LINE__, ##__VA_ARGS__)
+        MY_LOG2("no parameters");
+    });
 });
 SpecEnd
