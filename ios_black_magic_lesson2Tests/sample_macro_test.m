@@ -53,5 +53,9 @@ describe(@"sample_macro_test", ^{
         NSLog(@"Name is %@", NAME_WITH(1));
     });
     
+    it(@"can use __FILE__ and __LINE__ show current file and line", ^{
+        NSLog(@"%s:%d", __FILE__, __LINE__);
+    });
+    
 });
 SpecEnd
