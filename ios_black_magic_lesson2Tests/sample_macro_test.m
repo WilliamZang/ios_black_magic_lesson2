@@ -38,5 +38,20 @@ describe(@"sample_macro_test", ^{
     } while(0)
         TRUE_AND_LOG(1 + 1 == 2);
     });
+    
+    it(@"can use ## to concat", ^{
+#define DEF_VAR(type, name)    type type##_##name
+        DEF_VAR(int, a) = 5;
+        NSLog(@"%d", int_a);
+    });
+    
+    it(@"can use ## to concat for making another macro or function name", ^{
+#define NAME_1      @"William"
+#define NAME_2      @"John"
+#define NAME_3      @"Hugo"
+#define NAME_WITH(i)    NAME_##i
+        NSLog(@"Name is %@", NAME_WITH(1));
+    });
+    
 });
 SpecEnd
