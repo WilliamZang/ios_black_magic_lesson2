@@ -54,7 +54,13 @@ describe(@"sample_macro_test", ^{
     });
     
     it(@"can use __FILE__ and __LINE__ show current file and line", ^{
-        NSLog(@"%s:%d", __FILE__, __LINE__);
+        NSLog(@"%s\n%d\n%s\n%s\n%s\n%s",
+              __FILE__,
+              __LINE__,
+              __DATE__,
+              __TIME__,
+              __TIMESTAMP__,
+              __FUNCTION__);
     });
     
     it(@"can use ... to receive multi parameters", ^{
