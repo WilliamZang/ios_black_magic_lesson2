@@ -44,6 +44,25 @@
 //#define DEC(N)    N - 1
 //#define INC(N)    N + 1
 
+#define IS_EQ(A, B)   _CONCAT(_IS_EQ, A)(B)
+
+#define _CONCAT(A, B)   A ## B
+
+#define _IS_EQ0(B)    _CONCAT(_IS_EQ0_, B)
+
+#define _IS_EQ0_0   1
+#define _IS_EQ0_1   0
+#define _IS_EQ0_2   0
+#define _IS_EQ0_3   0
+#define _IS_EQ0_4   0
+#define _IS_EQ0_5   0
+
+#define _IS_EQ1(B)    _IS_EQ0(DEC(B))
+#define _IS_EQ2(B)    _IS_EQ1(DEC(B))
+#define _IS_EQ3(B)    _IS_EQ2(DEC(B))
+#define _IS_EQ4(B)    _IS_EQ3(DEC(B))
+#define _IS_EQ5(B)    _IS_EQ4(DEC(B))
+
 SpecBegin(condition_macro_test)
 
 describe(@"condition_macro_test", ^{
@@ -64,6 +83,13 @@ describe(@"condition_macro_test", ^{
         expect(value).to.equal(3);
         value = INC(1);
         expect(value).to.equal(2);
+    });
+    
+    it(@"can static condition in preprocess", ^{
+        int zeroOrOne = IS_EQ(4, 5);
+        expect(zeroOrOne).to.equal(0);
+        zeroOrOne = IS_EQ(3, 3);
+        expect(zeroOrOne).to.equal(1);
     });
 });
 
