@@ -35,6 +35,11 @@
 #define ARG_COUNT(...) \
   ARG_AT(5, ##__VA_ARGS__, 5, 4, 3, 2, 1, 0)
 
+#define DEC(N)          \
+  ARG_AT(N, -1, 0, 1, 2, 3, 4)
+
+#define INC(N)          \
+  ARG_AT(N, 1, 2, 3, 4, 5)
 SpecBegin(condition_macro_test)
 
 describe(@"condition_macro_test", ^{
@@ -44,7 +49,7 @@ describe(@"condition_macro_test", ^{
     });
     
     it(@"should get args count", ^{
-        int count = ARG_COUNT(1, 2, 3, 4);
+        int count = ARG_COUNT(10, 20, 30, 40);
         expect(count).to.equal(4);
         count = ARG_COUNT();
         expect(count).to.equal(0);
