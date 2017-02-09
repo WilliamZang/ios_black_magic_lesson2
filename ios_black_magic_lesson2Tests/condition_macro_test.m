@@ -9,6 +9,7 @@
 #import <Expecta/Expecta.h>
 #import <Specta/Specta.h>
 
+// 普通的宏判断
 #define HAS_FLAG
 
 #ifdef HAS_FLAG
@@ -23,6 +24,7 @@
 #define VALUE2 1
 #endif
 
+// 可变参数宏小例子1
 #define ARG_AT(INDEX, ...) _ARG_AT##INDEX(__VA_ARGS__)
 
 #define _ARG_AT0(_0, ...) _0
@@ -32,9 +34,11 @@
 #define _ARG_AT4(_0, _1, _2, _3, _4, ...) _4
 #define _ARG_AT5(_0, _1, _2, _3, _4, _5, ...) _5
 
+// 可变参数宏小例子2
 #define ARG_COUNT(...) \
   ARG_AT(5, ##__VA_ARGS__, 5, 4, 3, 2, 1, 0)
 
+// 可变参数宏小例子3
 #define DEC(N)          \
   ARG_AT(N, -1, 0, 1, 2, 3, 4)
 
@@ -44,6 +48,7 @@
 //#define DEC(N)    N - 1
 //#define INC(N)    N + 1
 
+// 宏的静态判断例子1
 #define IS_EQ(A, B)   _CONCAT(_IS_EQ, A)(B)
 
 #define _CONCAT(A, B)   A ## B
