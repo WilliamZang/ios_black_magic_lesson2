@@ -40,6 +40,10 @@
 
 #define INC(N)          \
   ARG_AT(N, 1, 2, 3, 4, 5)
+
+//#define DEC(N)    N - 1
+//#define INC(N)    N + 1
+
 SpecBegin(condition_macro_test)
 
 describe(@"condition_macro_test", ^{
@@ -53,6 +57,13 @@ describe(@"condition_macro_test", ^{
         expect(count).to.equal(4);
         count = ARG_COUNT();
         expect(count).to.equal(0);
+    });
+    
+    it(@"should dec or inc by macros", ^{
+        int value = DEC(4);
+        expect(value).to.equal(3);
+        value = INC(1);
+        expect(value).to.equal(2);
     });
 });
 
