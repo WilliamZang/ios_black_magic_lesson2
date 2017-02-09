@@ -49,6 +49,8 @@
 //#define INC(N)    N + 1
 
 // 宏的静态判断例子1
+//#define IS_EQ(A, B)   A > B ? _IS_EQ(B, A) : _IS_EQ(A, B)
+//#define _IS_EQ(A, B)   _CONCAT(_IS_EQ, A)(B)
 #define IS_EQ(A, B)   _CONCAT(_IS_EQ, A)(B)
 
 #define _CONCAT(A, B)   A ## B
