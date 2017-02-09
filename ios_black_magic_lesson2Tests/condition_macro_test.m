@@ -68,6 +68,15 @@
 #define _IS_EQ4(B)    _IS_EQ3(DEC(B))
 #define _IS_EQ5(B)    _IS_EQ4(DEC(B))
 
+// 宏的静态判断例子2
+#define IF(CONDITION)   _CONCAT(_IF, CONDITION)
+
+#define _CONSUME(...)
+#define _EXPEND(...)    __VA_ARGS__
+
+#define _IF1(...)     __VA_ARGS__ _CONSUME
+#define _IF0(...)     _EXPEND
+
 SpecBegin(condition_macro_test)
 
 describe(@"condition_macro_test", ^{
@@ -95,6 +104,12 @@ describe(@"condition_macro_test", ^{
         expect(zeroOrOne).to.equal(0);
         zeroOrOne = IS_EQ(3, 3);
         expect(zeroOrOne).to.equal(1);
+    });
+    
+    it(@"can use if to choose follow expressions", ^{
+        CGPoint point = CGPointMake(IF(IS_EQ(3, 4))(1, 2)(18, 22));
+        expect(point.x).to.equal(18);
+        expect(point.y).to.equal(22);
     });
 });
 
