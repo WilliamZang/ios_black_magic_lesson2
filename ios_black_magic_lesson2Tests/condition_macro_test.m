@@ -32,12 +32,22 @@
 #define _ARG_AT4(_0, _1, _2, _3, _4, ...) _4
 #define _ARG_AT5(_0, _1, _2, _3, _4, _5, ...) _5
 
+#define ARG_COUNT(...) \
+  ARG_AT(5, ##__VA_ARGS__, 5, 4, 3, 2, 1, 0)
+
 SpecBegin(condition_macro_test)
 
 describe(@"condition_macro_test", ^{
     it(@"should find element at args", ^{
         int value = ARG_AT(3, 100, 200, 300, 400);
         expect(value).to.equal(400);
+    });
+    
+    it(@"should get args count", ^{
+        int count = ARG_COUNT(1, 2, 3, 4);
+        expect(count).to.equal(4);
+        count = ARG_COUNT();
+        expect(count).to.equal(0);
     });
 });
 
