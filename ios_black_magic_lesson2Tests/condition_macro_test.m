@@ -118,6 +118,11 @@ describe(@"condition_macro_test", ^{
         expect(point2.x).to.equal(1);
         expect(point2.y).to.equal(2);
     });
+    
+    it(@"cannot use macro condition for runtime", ^{
+//        int a = 0, b = 1;
+//        int zeroOrOne = IS_EQ(a, b);
+    });
 });
 
 SpecEnd
