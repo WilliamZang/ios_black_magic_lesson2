@@ -71,6 +71,8 @@
 #define _IS_EQ5(B)    _IS_EQ4(DEC(B))
 
 // 宏的静态判断例子2
+
+// 使用的时候IF(判断条件)(为真时候的表达式)(为假的时候的表达式)
 #define IF(CONDITION)   _CONCAT(_IF, CONDITION)
 
 #define _CONSUME(...)
@@ -112,6 +114,9 @@ describe(@"condition_macro_test", ^{
         CGPoint point = CGPointMake(IF(IS_EQ(3, 4))(1, 2)(18, 22));
         expect(point.x).to.equal(18);
         expect(point.y).to.equal(22);
+        CGPoint point2 = CGPointMake(IF(IS_EQ(4, 4))(1, 2)(18, 22));
+        expect(point2.x).to.equal(1);
+        expect(point2.y).to.equal(2);
     });
 });
 
