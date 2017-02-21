@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223027901E59DD3F00EC5DAB /* Object.c in Sources */ = {isa = PBXBuildFile; fileRef = 2230278E1E59DD3F00EC5DAB /* Object.c */; };
+		223027931E59EBA400EC5DAB /* Car.c in Sources */ = {isa = PBXBuildFile; fileRef = 223027911E59EBA400EC5DAB /* Car.c */; };
+		223027951E59FFB000EC5DAB /* oop_test1.m in Sources */ = {isa = PBXBuildFile; fileRef = 223027941E59FFB000EC5DAB /* oop_test1.m */; };
+		223027981E5A0B0D00EC5DAB /* Taxi.c in Sources */ = {isa = PBXBuildFile; fileRef = 223027961E5A0B0D00EC5DAB /* Taxi.c */; };
 		22758DFF1E471AED006DB197 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22758DFE1E471AED006DB197 /* main.m */; };
 		22758E021E471AED006DB197 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22758E011E471AED006DB197 /* AppDelegate.m */; };
 		22758E051E471AED006DB197 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22758E041E471AED006DB197 /* ViewController.m */; };
@@ -34,6 +38,13 @@
 
 /* Begin PBXFileReference section */
 		187A58488E3B6C56558569DB /* Pods-ios_black_magic_lesson2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_black_magic_lesson2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_black_magic_lesson2/Pods-ios_black_magic_lesson2.debug.xcconfig"; sourceTree = "<group>"; };
+		2230278E1E59DD3F00EC5DAB /* Object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Object.c; sourceTree = "<group>"; };
+		2230278F1E59DD3F00EC5DAB /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		223027911E59EBA400EC5DAB /* Car.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Car.c; sourceTree = "<group>"; };
+		223027921E59EBA400EC5DAB /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		223027941E59FFB000EC5DAB /* oop_test1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oop_test1.m; sourceTree = "<group>"; };
+		223027961E5A0B0D00EC5DAB /* Taxi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Taxi.c; sourceTree = "<group>"; };
+		223027971E5A0B0D00EC5DAB /* Taxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Taxi.h; sourceTree = "<group>"; };
 		22758DFA1E471AED006DB197 /* ios_black_magic_lesson2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_black_magic_lesson2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22758DFE1E471AED006DB197 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22758E001E471AED006DB197 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2230278D1E59DD0600EC5DAB /* oop_with_c1 */ = {
+			isa = PBXGroup;
+			children = (
+				2230278E1E59DD3F00EC5DAB /* Object.c */,
+				2230278F1E59DD3F00EC5DAB /* Object.h */,
+				223027911E59EBA400EC5DAB /* Car.c */,
+				223027921E59EBA400EC5DAB /* Car.h */,
+				223027961E5A0B0D00EC5DAB /* Taxi.c */,
+				223027971E5A0B0D00EC5DAB /* Taxi.h */,
+			);
+			path = oop_with_c1;
+			sourceTree = "<group>";
+		};
 		22758DF11E471AED006DB197 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +127,7 @@
 		22758DFC1E471AED006DB197 /* ios_black_magic_lesson2 */ = {
 			isa = PBXGroup;
 			children = (
+				2230278D1E59DD0600EC5DAB /* oop_with_c1 */,
 				22758E001E471AED006DB197 /* AppDelegate.h */,
 				22758E011E471AED006DB197 /* AppDelegate.m */,
 				22758E031E471AED006DB197 /* ViewController.h */,
@@ -135,6 +160,7 @@
 				22758E351E4B8987006DB197 /* expend_macro2_test.m */,
 				22758E371E4CA31C006DB197 /* condition_macro_test.m */,
 				22758E391E4DDF3F006DB197 /* macro_big_example_test.m */,
+				223027941E59FFB000EC5DAB /* oop_test1.m */,
 			);
 			path = ios_black_magic_lesson2Tests;
 			sourceTree = "<group>";
@@ -360,8 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223027931E59EBA400EC5DAB /* Car.c in Sources */,
 				22758E051E471AED006DB197 /* ViewController.m in Sources */,
 				22758E021E471AED006DB197 /* AppDelegate.m in Sources */,
+				223027981E5A0B0D00EC5DAB /* Taxi.c in Sources */,
+				223027901E59DD3F00EC5DAB /* Object.c in Sources */,
 				22758DFF1E471AED006DB197 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223027951E59FFB000EC5DAB /* oop_test1.m in Sources */,
 				22758E381E4CA31C006DB197 /* condition_macro_test.m in Sources */,
 				22758E3A1E4DDF3F006DB197 /* macro_big_example_test.m in Sources */,
 				22758E341E4A37B0006DB197 /* expend_macro1_test.m in Sources */,
