@@ -27,6 +27,7 @@
 // 可变参数宏小例子1
 #define ARG_AT(INDEX, ...) _ARG_AT##INDEX(__VA_ARGS__)
 
+#define _ARG_ATX(...)   X
 #define _ARG_AT0(_0, ...) _0
 #define _ARG_AT1(_0, _1, ...) _1
 #define _ARG_AT2(_0, _1, _2, ...) _2
@@ -40,7 +41,7 @@
 
 // 可变参数宏小例子3
 #define DEC(N)          \
-  ARG_AT(N, -1, 0, 1, 2, 3, 4)
+  ARG_AT(N, X, 0, 1, 2, 3, 4)
 
 #define INC(N)          \
   ARG_AT(N, 1, 2, 3, 4, 5)
@@ -57,6 +58,7 @@
 
 #define _IS_EQ0(B)    _CONCAT(_IS_EQ0_, B)
 
+#define _IS_EQ0_X   0
 #define _IS_EQ0_0   1
 #define _IS_EQ0_1   0
 #define _IS_EQ0_2   0
@@ -104,7 +106,7 @@ describe(@"condition_macro_test", ^{
     });
     
     it(@"can static condition in preprocess", ^{
-        int zeroOrOne = IS_EQ(4, 5);
+        int zeroOrOne = IS_EQ(5, 2);
         expect(zeroOrOne).to.equal(0);
         zeroOrOne = IS_EQ(3, 3);
         expect(zeroOrOne).to.equal(1);
