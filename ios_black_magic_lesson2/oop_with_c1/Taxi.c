@@ -13,6 +13,7 @@ typedef struct Taxi_Private_Data {
 } Taxi_Private_Data;
 typedef struct Taxi_Private {
     Car super;
+    float change;
     Taxi_Private_Data *private;
 } Taxi_Private;
 
@@ -49,6 +50,11 @@ int set_off(Taxi_Private *self) {
     }
 }
 
+void taxi_drive(Taxi_Private *self, int meters) {
+    SUPER_CALL(self, Car, drive, meters);
+    self->change += meters;
+}
+
 void taxi_dealloc(struct Taxi_Private *self) {
     free(self->private);
     SUPER_CALL_DEF_AS(self, Car, Object, dealloc);
@@ -68,6 +74,7 @@ Taxi_MTable *Get_Taxi_MTable() {
         mtable = &static_mtable;
         
         ((Car_MTable *)mtable)->color = (Color_Type *)taxi_color;
+        ((Car_MTable *)mtable)->drive = (Drive_Type *)taxi_drive;
     }
     return mtable;
 }

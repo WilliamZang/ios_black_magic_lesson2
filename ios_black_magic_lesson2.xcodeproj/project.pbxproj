@@ -45,6 +45,8 @@
 		223027941E59FFB000EC5DAB /* oop_test1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oop_test1.m; sourceTree = "<group>"; };
 		223027961E5A0B0D00EC5DAB /* Taxi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Taxi.c; sourceTree = "<group>"; };
 		223027971E5A0B0D00EC5DAB /* Taxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Taxi.h; sourceTree = "<group>"; };
+		223027991E5CC07400EC5DAB /* oop_sample_file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = oop_sample_file.c; sourceTree = "<group>"; };
+		2230279B1E5CCAE800EC5DAB /* oop_sample_file.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oop_sample_file.m; sourceTree = "<group>"; };
 		22758DFA1E471AED006DB197 /* ios_black_magic_lesson2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_black_magic_lesson2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22758DFE1E471AED006DB197 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22758E001E471AED006DB197 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2230278D1E59DD0600EC5DAB /* oop_with_c1 */ = {
+		2230278D1E59DD0600EC5DAB /* oop_with_c */ = {
 			isa = PBXGroup;
 			children = (
 				2230278E1E59DD3F00EC5DAB /* Object.c */,
@@ -101,6 +103,7 @@
 				223027961E5A0B0D00EC5DAB /* Taxi.c */,
 				223027971E5A0B0D00EC5DAB /* Taxi.h */,
 			);
+			name = oop_with_c;
 			path = oop_with_c1;
 			sourceTree = "<group>";
 		};
@@ -127,7 +130,7 @@
 		22758DFC1E471AED006DB197 /* ios_black_magic_lesson2 */ = {
 			isa = PBXGroup;
 			children = (
-				2230278D1E59DD0600EC5DAB /* oop_with_c1 */,
+				2230278D1E59DD0600EC5DAB /* oop_with_c */,
 				22758E001E471AED006DB197 /* AppDelegate.h */,
 				22758E011E471AED006DB197 /* AppDelegate.m */,
 				22758E031E471AED006DB197 /* ViewController.h */,
@@ -137,6 +140,8 @@
 				22758E0B1E471AED006DB197 /* LaunchScreen.storyboard */,
 				22758E0E1E471AED006DB197 /* Info.plist */,
 				22758DFD1E471AED006DB197 /* Supporting Files */,
+				223027991E5CC07400EC5DAB /* oop_sample_file.c */,
+				2230279B1E5CCAE800EC5DAB /* oop_sample_file.m */,
 			);
 			path = ios_black_magic_lesson2;
 			sourceTree = "<group>";

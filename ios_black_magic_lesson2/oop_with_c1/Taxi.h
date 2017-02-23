@@ -37,6 +37,7 @@ Taxi_MTable *Get_Taxi_MTable();
 
 typedef struct Taxi {
     Car super;
+    float change;
     void *private;
 } Taxi;
 
